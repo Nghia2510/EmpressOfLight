@@ -1,0 +1,157 @@
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.button-text-only[b-6llox7jctz] {
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ chuột thay đổi thành biểu tượng tay chỉ */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+    padding: 10px; /* Thêm khoảng đệm nếu cần */
+}
+
+    .button-text-only:hover[b-6llox7jctz] {
+        color: red; /* Thay đổi màu văn bản khi hover */
+        background-color: transparent; /* Đảm bảo không có nền khi hover */
+    }
+
+a.navbar-brand[b-6llox7jctz] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-6llox7jctz] {
+  color: #0077cc;
+}
+
+.btn-primary[b-6llox7jctz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-6llox7jctz], .nav-pills .show > .nav-link[b-6llox7jctz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-6llox7jctz] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-6llox7jctz] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-6llox7jctz] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-6llox7jctz] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-6llox7jctz] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+
+
+
+.floating-container[b-6llox7jctz] {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  margin: 35px 25px;
+}
+.floating-container:hover[b-6llox7jctz] {
+  height: 300px;
+}
+.floating-container:hover .floating-button[b-6llox7jctz] {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  -webkit-transform: translatey(5px);
+          transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container:hover .element-container .float-element:nth-child(1)[b-6llox7jctz] {
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+          animation: come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element:nth-child(2)[b-6llox7jctz] {
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+          animation: come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element:nth-child(3)[b-6llox7jctz] {
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+          animation: come-in 0.4s forwards 0.6s;
+}
+.floating-container .floating-button[b-6llox7jctz] {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #2cb3f0;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container .float-element[b-6llox7jctz] {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+.floating-container .float-element .material-icons[b-6llox7jctz] {
+  vertical-align: middle;
+  font-size: 16px;
+}
+.floating-container .float-element:nth-child(1)[b-6llox7jctz] {
+  background: #42A5F5;
+  box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+}
+.floating-container .float-element:nth-child(2)[b-6llox7jctz] {
+  background: #4CAF50;
+  box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+}
+.floating-container .float-element:nth-child(3)[b-6llox7jctz] {
+  background: #FF9800;
+  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+}
+
+
+
+
+
+
+
+

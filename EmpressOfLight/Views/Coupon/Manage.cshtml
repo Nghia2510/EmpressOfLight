@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+@model List<Coupon>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Percent</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var c in Model)
+            {
+                <tr>
+                <form method="post" asp-controller="Coupon" asp-action="EditCoupon">
+                    <th scope="row">#</th>
+                    <td><input name="code" value="@c.Code" readonly disabled/> </td>
+                    <td><input name="description" value="@c.Description" required /> </td>
+                    <td><input type="number" name="discount" value="@c.Discount" required /> </td>
+                    <td><input type="checkbox" name="ispercent" @(c.IsPercent ? "checked" : "") onchange="this.value=this.checked" /></td>
+                    <td><input type="number" name="stock" value="@c.Stock" required /> </td>
+                    <td><button class="btn btn-danger" type="submit">Save</button></td>
+                </form>
+                </tr>
+            }
+        }
+        <tr>
+            <form method="post" asp-controller="Coupon" asp-action="AddCoupon">
+                <th scope="row">#</th>
+                <td><input name="code" required /></td>
+                <td><input name="description" required /></td>
+                <td><input type="number" name="discount" required /></td>
+                <td><input type="checkbox" name="ispercent" /></td>
+                <td><input type="number" name="stock" required /></td>
+                <td><button class="btn btn-primary" type="submit">Add</button></td>
+            </form>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,346 @@
+/* _content/EmpressOfLight/Views/Profile/Index.cshtml.rz.scp.css */
+body[b-xw0bmciqhl] {
+}
+
+.card-style1[b-xw0bmciqhl] {
+    box-shadow: 0px 0px 10px 0px rgb(89 75 128 / 9%);
+}
+
+.border-0[b-xw0bmciqhl] {
+    border: 0 !important;
+}
+
+.card[b-xw0bmciqhl] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+section[b-xw0bmciqhl] {
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.mb-2-3[b-xw0bmciqhl], .my-2-3[b-xw0bmciqhl] {
+    margin-bottom: 2.3rem;
+}
+
+.section-title[b-xw0bmciqhl] {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.text-primary[b-xw0bmciqhl] {
+    color: #ceaa4d !important;
+}
+
+.text-secondary[b-xw0bmciqhl] {
+    color: #15395A !important;
+}
+
+.font-weight-600[b-xw0bmciqhl] {
+    font-weight: 600;
+}
+
+.display-26[b-xw0bmciqhl] {
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 992px) {
+    .p-lg-7[b-xw0bmciqhl] {
+        padding: 4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .p-md-6[b-xw0bmciqhl] {
+        padding: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .p-sm-2-3[b-xw0bmciqhl] {
+        padding: 2.3rem;
+    }
+}
+
+.p-1-9[b-xw0bmciqhl] {
+    padding: 1.9rem;
+}
+
+.bg-secondary[b-xw0bmciqhl] {
+    background: #15395A !important;
+}
+
+@media screen and (min-width: 576px) {
+    .pe-sm-6[b-xw0bmciqhl], .px-sm-6[b-xw0bmciqhl] {
+        padding-right: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .ps-sm-6[b-xw0bmciqhl], .px-sm-6[b-xw0bmciqhl] {
+        padding-left: 3.5rem;
+    }
+}
+
+.pe-1-9[b-xw0bmciqhl], .px-1-9[b-xw0bmciqhl] {
+    padding-right: 1.9rem;
+}
+
+.ps-1-9[b-xw0bmciqhl], .px-1-9[b-xw0bmciqhl] {
+    padding-left: 1.9rem;
+}
+
+.pb-1-9[b-xw0bmciqhl], .py-1-9[b-xw0bmciqhl] {
+    padding-bottom: 1.9rem;
+}
+
+.pt-1-9[b-xw0bmciqhl], .py-1-9[b-xw0bmciqhl] {
+    padding-top: 1.9rem;
+}
+
+.mb-1-9[b-xw0bmciqhl], .my-1-9[b-xw0bmciqhl] {
+    margin-bottom: 1.9rem;
+}
+
+@media (min-width: 992px) {
+    .d-lg-inline-block[b-xw0bmciqhl] {
+        display: inline-block !important;
+    }
+}
+
+.rounded[b-xw0bmciqhl] {
+    border-radius: 0.25rem !important;
+}
+/* _content/EmpressOfLight/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.button-text-only[b-6llox7jctz] {
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ chuột thay đổi thành biểu tượng tay chỉ */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+    padding: 10px; /* Thêm khoảng đệm nếu cần */
+}
+
+    .button-text-only:hover[b-6llox7jctz] {
+        color: red; /* Thay đổi màu văn bản khi hover */
+        background-color: transparent; /* Đảm bảo không có nền khi hover */
+    }
+
+a.navbar-brand[b-6llox7jctz] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-6llox7jctz] {
+  color: #0077cc;
+}
+
+.btn-primary[b-6llox7jctz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-6llox7jctz], .nav-pills .show > .nav-link[b-6llox7jctz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-6llox7jctz] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-6llox7jctz] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-6llox7jctz] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-6llox7jctz] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-6llox7jctz] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+
+
+
+.floating-container[b-6llox7jctz] {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  margin: 35px 25px;
+}
+.floating-container:hover[b-6llox7jctz] {
+  height: 300px;
+}
+.floating-container:hover .floating-button[b-6llox7jctz] {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  -webkit-transform: translatey(5px);
+          transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container:hover .element-container .float-element:nth-child(1)[b-6llox7jctz] {
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+          animation: come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element:nth-child(2)[b-6llox7jctz] {
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+          animation: come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element:nth-child(3)[b-6llox7jctz] {
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+          animation: come-in 0.4s forwards 0.6s;
+}
+.floating-container .floating-button[b-6llox7jctz] {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #2cb3f0;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container .float-element[b-6llox7jctz] {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+.floating-container .float-element .material-icons[b-6llox7jctz] {
+  vertical-align: middle;
+  font-size: 16px;
+}
+.floating-container .float-element:nth-child(1)[b-6llox7jctz] {
+  background: #42A5F5;
+  box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+}
+.floating-container .float-element:nth-child(2)[b-6llox7jctz] {
+  background: #4CAF50;
+  box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+}
+.floating-container .float-element:nth-child(3)[b-6llox7jctz] {
+  background: #FF9800;
+  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+/* _content/EmpressOfLight/Views/Shared/_LayoutAdmin.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.button-text-only[b-zjj1w6hpb8] {
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ chuột thay đổi thành biểu tượng tay chỉ */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+    padding: 10px; /* Thêm khoảng đệm nếu cần */
+}
+
+    .button-text-only:hover[b-zjj1w6hpb8] {
+        color: red; /* Thay đổi màu văn bản khi hover */
+        background-color: transparent; /* Đảm bảo không có nền khi hover */
+    }
+
+a.navbar-brand[b-zjj1w6hpb8] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-zjj1w6hpb8] {
+  color: #0077cc;
+}
+
+.btn-primary[b-zjj1w6hpb8] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-zjj1w6hpb8], .nav-pills .show > .nav-link[b-zjj1w6hpb8] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-zjj1w6hpb8] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-zjj1w6hpb8] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-zjj1w6hpb8] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-zjj1w6hpb8] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-zjj1w6hpb8] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

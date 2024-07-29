@@ -1,0 +1,521 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+@model List<Product>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fruitables - Vegetable Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="This is the best cosplay costumer shop in the world. There are many sets that trending of hot anime here. We update every day to provide to you the life of wibu." name="description">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/EmpressOfLight.styles.css" asp-append-version="true" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet" asp-append-version="true">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" asp-append-version="true" />
+
+    <script type="application/ld+json">
+        {
+          "context": "https://schema.org",
+          "type": "Organization",
+          "name": "Tên Doanh Nghiệp",
+          "url": "https://www.example.com",
+          "logo": "https://www.example.com/logo.png",
+          "contactPoint": {
+            "type": "ContactPoint",
+            "telephone": "+1-800-555-5555",
+            "contactType": "Customer Service"
+          }
+        }
+    </script>
+    </head>
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+       
+
+        <!-- Hero Start -->
+    <div class="mb-5 py-5" style="background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('img/girlbackground.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-color: rgba(255, 255, 255, 0.2);">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-12 col-lg-7 " >
+                    <h4 class="mb-3" style="margin-left: 40px; color: hotpink; text-shadow: -2px -2px 0 #fff,
+                                                                         2px -2px 0 #fff,
+                                                                             -2px  2px 0 #fff,
+                                                                                    2px  2px 0 #fff;">
+                        Welcome to
+                    </h4>
+                    <h1 style="color: deeppink; margin-left: 50px; text-shadow: -2px -2px 0 #fff,
+                                                                         2px -2px 0 #fff,
+                                                                             -2px  2px 0 #fff,
+                                                                                    2px  2px 0 #fff;" 
+                    class="mb-5 display-3 ">
+                        Empress of Light
+                    </h1>
+                    <audio autoplay loop controls style="margin-left: 90px;">
+                        <source src="/musics/Shikanoko.mp3" type="audio/mpeg">
+                        Trình duyệt của bạn không hỗ trợ thẻ âm thanh.
+                    </audio>
+                    </div>
+                    <div class="col-md-12 col-lg-5">
+                    <img alt="this is image" style="width: 450px;" src="~/gifs/shigure.gif" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- Featurs Section Start -->
+        <div class="container-fluid featurs py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Free Shipping</h5>
+                                <p class="mb-0">Free on order over $300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-user-shield fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Security Payment</h5>
+                                <p class="mb-0">100% security payment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>30 Day Return</h5>
+                                <p class="mb-0">30 day money guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fa fa-phone-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>24/7 Support</h5>
+                                <p class="mb-0">Support every time fast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featurs Section End -->
+
+
+        <!-- Fruits Shop Start-->
+        <div class="container-fluid fruite py-5">
+            <div class="container py-5">
+            <div class="tab-class text-center" style="background-color: rgba(255, 255, 255, 0.6); border-radius:10px;">
+                    <div class="row g-4">
+                        <div class="">
+                        <h1>Top 10 hottest anime at the time</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                <img src="img/anime1.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Spice and Wolf</h4>
+                                                    <p>The story about wolf and her meal.</p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                <img src="img/anime2.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Delicious in Dungeon</h4>
+                                                <p>Delicious in Dungeon Anime's English-Subtitled Trailer Reveals More Cast, Bump of Chicken Opening Song</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/anime3.webp" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>I Was Reincarnated as the 7th Prince</h4>
+                                                <p>The study of magic requires aptitude, effort, and the right bloodline. One sorcerer loved magic, despite lacking the bloodline and aptitude for it, ...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/anime4.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Mashle</h4>
+                                                <p>Magic and Muscles is a Japanese manga series written and illustrated by Hajime Kōmoto. It was serialized in Shueisha's shōnen manga magazine Weekly ...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/anime5.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Solo Leveling</h4>
+                                                <p>Ore dake Level Up na Ken, Na Honjaman Level Up, I Level Up Alone</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/anime6.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>Fairy Tail: 100 Years Quest</h4>
+                                                <p>Cast & Crew · Tetsuya Kakihara. Natsu Dragneel · Aya Hirano. Lucy Heartfilia · RK. Rie Kugimiya. Happy · Yuuichi Nakamura. Gray Fullbuster · SO. Sayaka Ohara. Erza ...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/anime7.webp" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>Cherry Magic!</h4>
+                                                <p>A live-action television drama adaptation aired from October 9 to December 24, 2020, on TV Tokyo's MokuDra 25 [ja] programming block, which enjoyed high ratings ...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/anime8.webp" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Kaiju no.8</h4>
+                                                <p>Kaiju No. 8 - Quái Vật Số 8 kể về anh chành Kafka Hibino mang ước mơ gia nhập Quân đoàn từ nhỏ nhưng lại bị dòng đời đưa đẩy, phải làm công việc chuyên xử ...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Grapes</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Raspberries</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Oranges</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-6.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apple</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Grapes</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apricots</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Banana</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Raspberries</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="this is image">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Clothiers</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Oranges</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        <!-- Fruits Shop End-->
+
+
+        <!-- Featurs Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="service-item bg-secondary rounded border border-secondary">
+                                <img src="img/home1.jpg" class="img-fluid rounded-top w-100" alt="this is image">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-primary text-center p-4 rounded">
+                                        <h5 class="text-white">Ultimate Materials</h5>
+                                        <h3 class="mb-0">20% OFF</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="service-item bg-dark rounded border border-dark">
+                            <img src="img/home2.jpg" class="img-fluid rounded-top w-100" alt="this is image">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-light text-center p-4 rounded">
+                                        <h5 class="text-primary">No</h5>
+                                        <h3 class="mb-0">Free Ship</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="service-item bg-primary rounded border border-primary">
+                            <img src="img/home3.jpg" class="img-fluid rounded-top w-100" alt="this is image">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-secondary text-center p-4 rounded">
+                                        <h5 class="text-white">Of course not</h5>
+                                        <h3 class="mb-0">Discount 30$</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featurs End -->
+
+
+        <!-- Vesitable Shop Start-->
+        <div class="container-fluid vesitable py-5">
+        <div class="container py-5" style="background-color: rgba(255, 255, 255, 0.6); border-radius:10px;">
+                <h1 class="mb-0">Best seller costumers</h1>
+                <div class="owl-carousel vegetable-carousel justify-content-center">
+                @{
+                    foreach(var p in Model)
+                    {
+                        <div class="border border-primary rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="@p.ProductImgPreview" class="img-fluid w-100 rounded-top" alt="this is image">
+                            </div>
+                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Clothiers</div>
+                            <div class="p-4 rounded-bottom">
+                                <h4>@p.ProductName</h4>
+                                <p>@p.ShortDescription</p>
+                            </div>
+                        </div>
+                    }
+                }
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Vesitable Shop End -->
+
+
+        <!-- Back to Top -->
+@*         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+    *@
+    <a href="https://m.me/348630188342422" style="" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    </body>
+
+</html>

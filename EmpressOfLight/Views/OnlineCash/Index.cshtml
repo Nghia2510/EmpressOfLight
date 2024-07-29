@@ -1,0 +1,38 @@
+﻿@model List<OnlineCash>
+@{
+    Layout = "_LayoutAdmin";
+}
+<form method="post" asp-controller="OnlineCash" asp-action="Index">
+    <select name="paymethod" class="form-select" aria-label="Default select example" onchange="this.form.submit()">
+        <option value="All">default</option>
+        <option value="">All</option>
+        <option value="Paypal">Paypal</option>
+        <option value="VNPay">VNPay</option>
+    </select>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Method</th>
+            <th scope="col">Order ID</th>
+            <th scope="col">Price</th>
+            <th scope="col">Date Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var oc in Model)
+            {
+                <tr>
+                    <th scope="row">@oc.PaypalCashId</th>
+                    <td>@oc.PayMethod</td>
+                    <td>@oc.OrderId</td>
+                    <td>@oc.Price</td>
+                    <td>@oc.DateTime</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

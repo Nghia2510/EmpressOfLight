@@ -1,0 +1,35 @@
+﻿@model EmpressOfLightUser
+@{
+    ViewData["Title"] = "Profile";
+}
+<div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+        <div class="card card-style1 border-0" style="background-color: rgba(255, 255, 255, 0.6); border-radius:10px;>
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <img  style="width: 600px; border-radius: 500px;" src="@Model.Avatar" alt="...">
+                            </div>
+                                <div class="col-lg-6 px-xl-10">
+                                <form method="post" asp-controller="Profile" asp-action="UpdateProfile" enctype="multipart/form-data">
+                                    <div class=" d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                        <h3 class="h2 text-secondary mb-0"> @Model.FirstName @Model.LastName</h3>
+                                        <input name="firstname" style="border: 0; box-shadow: none;" value="@Model.FirstName" class=" text-secondary mb-0" />
+                                        <input name="lastname" style="border: 0; box-shadow: none;" value="@Model.LastName" class=" text-secondary mb-0" />
+                                        <input type="file" id="img" name="image" accept="image/*">
+
+                                    </div>
+                                    <ul class=" list-unstyled mb-1-9">
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> @Model.Email</li>
+                                        <li class="display-28"><input name="phone" style="border: 0; box-shadow: none;" class="display-26 text-secondary me-2 font-weight-600" value="@Model.PhoneNumber" /> </li>
+                                    </ul>
+                                    <button type="submit" class="btn btn-dark ">Save</button>
+                                </form>
+
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

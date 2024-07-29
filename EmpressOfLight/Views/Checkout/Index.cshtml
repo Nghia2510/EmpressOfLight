@@ -1,0 +1,274 @@
+﻿@using EmpressOfLight.Models.ViewModels
+@model CheckoutDetail
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fruitables - Vegetable Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+   
+ 
+    <!-- Checkout Page Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5" style="background-color: rgba(255, 255, 255, 0.6); border-radius:10px;">
+            <h1 class="mb-4">Billing details</h1>
+                <div class="row g-5">
+                    <div class="col-md-12 col-lg-6 col-xl-7">
+                        <form method="post" asp-controller="Checkout" asp-action="ChooseShippingAddress">
+                        @{
+                            foreach (var p in Model.shippingAddresses)
+                            {
+                                if (p.Address != "")
+                                {
+                                        <div class="mb-2">
+                                        <a asp-controller="Checkout" asp-action="DeleteShippingAddress" asp-route-shippingAddressId="@p.ShippingAddressId">X</a>
+                                        <input type="radio" class="form-check-input bg-primary border-0" id="@p.ShippingAddressId" name="shippingAddressId" value="@p.ShippingAddressId" onchange="this.form.submit()" @(p.ShippingAddressId == Model.orderSelects.ShippingAddressId ? "checked" : "") />
+                                        <label class="form-check-label" for="@p.ShippingAddressId">
+                                            <p>@p.FirstName @p.LastName</p>
+                                            <p>@p.Phone</p>
+                                            <p>@p.Address</p>
+                                        </label>
+                                        </div>
+                                }
+                            }
+                        }
+                        </form>
+                        
+                        <form method="post" asp-action="AddNewShippingAddress" asp-controller="Checkout">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">First Name<sup>*</sup></label>
+                                    <input name="firstName" type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Last Name<sup>*</sup></label>
+                                    <input name="lastName" type="text" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-label my-3">Address <sup>*</sup></label>
+                            <input name="address" type="text" class="form-control" placeholder="House Number Street Name" required>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-label my-3">Mobile<sup>*</sup></label>
+                            <input name="phone" type="tel" class="form-control" required>
+                        </div>
+                        <button type="submit">Add New Address</button>
+                        </form>
+                        
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-5">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Products</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        foreach( var cart in Model.carts)
+                                        {
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <img src="@cart.Size.Product.ProductImgPreview" class="img-fluid rounded-circle" style="width: 90px; height: 90px;" alt="">
+                                                        </div>
+                                                    </th>
+                                                    <td class="py-5">@cart.Size.Product.ProductName @cart.Size.SizeName</td>
+                                                    <td class="py-5">@cart.Size.Price vnđ</td>
+                                                    <td class="py-5">@cart.Quantity</td>
+                                                    <td class="py-5">@(cart.Size.Price * cart.Quantity) vnđ</td>
+                                                </tr>
+                                        }
+                                    }
+
+
+                                    <tr>
+                                        <th scope="row">
+                                        </th>
+                                        <td class="py-5">
+                                            <p class="mb-0 text-dark text-uppercase py-3">Shipping</p>
+                                        </td>
+                                        <td class="py-5"></td>
+                                        <td class="py-5"></td>
+                                        <td class="py-5">
+                                            <div class="py-3 border-bottom border-top">
+                                            <form asp-controller="Checkout" asp-action="ChooseShippingUnit" method="post">
+                                                <select id="shippingselect" name="shippingUnitId" class="form-select" onchange="this.form.submit()">
+                                                    @{
+                                                        foreach (var s in Model.shippingUnits)
+                                                        {
+                                                            if(s.ShippingUnitId == Model.orderSelects.ShippingUnitId)
+                                                            {
+                                                                    <option selected value="@s.ShippingUnitPrice">@s.ShippingUnitName</option>
+                                                            }
+                                                            else
+                                                            {
+                                                                    <option value="@s.ShippingUnitId">@s.ShippingUnitName</option>
+                                                            }
+                                                        }
+                                                    }
+                                                </select>
+                                            </form>
+                                                 
+                                            </div>
+                                            <p class="mb-0 text-dark text-uppercase py-3">@Model.orderSelects.ShippingUnit.ShippingUnitName</p>
+                                            <p class="mb-0 text-dark text-uppercase py-3">@Model.orderSelects.ShippingUnit.ShippingUnitDescription</p>
+                                            <p class="mb-0 text-dark text-uppercase py-3">@Model.orderSelects.ShippingUnit.ShippingUnitPrice VND</p>
+                                        </td>
+                                    </tr>
+                                    <div class="mt-5">
+                                        <form method="post" asp-controller="Checkout" asp-action="ApplyCoupon">
+                                        <input name="code" type="text" class="border-0 border-bottom rounded me-5 py-3 mb-4" placeholder="Coupon Code">
+                                        <button class="btn border-secondary rounded-pill px-4 py-3 text-primary" type="submit">Apply Coupon</button>
+                                        </form>
+                                        </div>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td class="py-5">
+                                            <p class="mb-0 text-dark text-uppercase py-3">Coupon: @Model.orderSelects.Code</p>
+                                        </td>
+                                        <td class="py-5"></td>
+                                        <td class="py-5"></td>
+                                    <td class="py-5"> - @(Model.orderSelects.Coupon.IsPercent ? @Model.orderSelects.Coupon.Discount + "%" : @Model.orderSelects.Coupon.Discount + "vnđ")</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                        </th>
+                                        <td class="py-5">
+                                            <p class="mb-0 text-dark text-uppercase py-3">TOTAL</p>
+                                        </td>
+                                        <td class="py-5"></td>
+                                        <td class="py-5"></td>
+                                        <td class="py-5">
+                                            <div class="py-3 border-bottom border-top">
+                                                <p class="mb-0 text-dark">
+                                                @{
+                                                    float total = Model.orderSelects.ShippingUnit.ShippingUnitPrice;
+                                                    foreach (var cart in Model.carts)
+                                                    {
+                                                        total += cart.Size.Price * cart.Quantity;
+                                                    }
+                                                    if(Model.orderSelects.Coupon.IsPercent)
+                                                    {
+                                                        total = total - total * Model.orderSelects.Coupon.Discount / 100;
+                                                    }
+                                                    else
+                                                    {
+                                                        total = total - Model.orderSelects.Coupon.Discount;
+                                                    }
+                                                } @total vnđ
+                                                        </p>
+                                                        </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    @{
+                        if(Model.orderSelects.ShippingAddress.Address != "")
+                        {
+                            <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                                <div id="paypal-button-container"></div>
+                            </div>
+                            <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                                <a asp-controller="Order" asp-action="CashOrder" asp-route-PaymentMethod="CashOnDelivery" class="btn btn-danger py-3 px-4 text-uppercase w-100 text-primary">Cash on Delivery</a>
+                            </div>
+                            <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                                <a asp-controller="Checkout" asp-action="VNPayCash" asp-route-PaymentMethod="CashOnDelivery" class="btn btn-danger py-3 px-4 text-uppercase w-100 text-primary">VN Pay</a>
+                            </div>
+                        }
+                        else
+                        {
+                            
+                        }
+                    }
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- Checkout Page End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+    <script src="https://www.paypal.com/sdk/js?client-id=@ViewBag.PaypalClientId"></script>
+
+    <script>
+        paypal.Buttons({
+            async createOrder() {
+                // const data = { orderID: 'your-order-id-here' }; // Replace with actual order ID
+
+                const response = await fetch("/Checkout/CreateOrder?x=Vaichuong", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    }
+                    // },
+                    // body: JSON.stringify(data)
+                    // body: JSON.stringify({
+                    //     cart: [{
+                    //         sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+                    //         quantity: "YOUR_PRODUCT_QUANTITY",
+                    //     }]
+                    // })
+                });
+
+                const order = await response.json();
+
+                return order.id;
+            },
+            async onApprove(data) {
+                // Capture the funds from the transaction.
+                const response = await fetch("/Checkout/CaptureOrder", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        orderID: data.orderID
+                    })
+                })
+                
+                const details = await response.json();
+
+                // Show success message to buyer
+                function showAlert(message) {
+                    return new Promise((resolve) => {
+                        alert(message);
+                        resolve();
+                    });
+                }
+
+                alert(`Transaction completed by ${details.payer.name.given_name}`);
+                setTimeout(2000);
+                window.location.href = '/Order/CashOrder?PaymentMethod=Paypal';
+            }
+        }
+        ).render('#paypal-button-container')
+    </script>
+</body>
+
+</html>
